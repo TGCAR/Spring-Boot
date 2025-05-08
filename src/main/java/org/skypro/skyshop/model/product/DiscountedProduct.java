@@ -1,7 +1,10 @@
 package org.skypro.skyshop.model.product;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
 import java.util.UUID;
 
+@JsonTypeName("simple")
 public class DiscountedProduct extends Product {
     private final int basePrice; // Базовая цена
     private final int discount;  // Скидка в процентах (целое число от 0 до 100)
