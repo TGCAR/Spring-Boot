@@ -1,11 +1,23 @@
 package org.skypro.skyshop.model.product;
 
 import org.skypro.skyshop.model.search.Searchable;
+
 import java.util.UUID;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, property = "type")
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = SimpleProduct.class, name = "simple"),
+        @JsonSubTypes.Type(value = DiscountedProduct.class, name = "discounted"),
+        @JsonSubTypes.Type(value = FixPriceProduct.class, name = "fixprice")})
 
 public abstract class Product implements Searchable {
     private final UUID id;
     private final String name;
+    protected Product() {
+        this.id = null;
+        this.name = null;
+    }
 
     public Product(UUID id, String name) {
         this.id = id;

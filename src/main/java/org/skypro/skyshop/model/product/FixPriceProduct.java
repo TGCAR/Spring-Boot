@@ -1,10 +1,13 @@
 package org.skypro.skyshop.model.product;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
 import java.util.UUID;
 
+@JsonTypeName("fixprice")
 public class FixPriceProduct extends Product {
     // Приватная константа для фиксированной цены
-    private static final int FIXED_PRICE = 50; // фиксированная цена
+    private final int FIXED_PRICE = 50; // фиксированная цена
 
     // Конструктор, принимающий только имя продукта
     public FixPriceProduct(UUID id, String name) {
@@ -14,7 +17,7 @@ public class FixPriceProduct extends Product {
     // Переопределенный метод getPrice, возвращающий фиксированную цену
     @Override
     public int getPrice() {
-        return FIXED_PRICE;
+        return 100;
     }
 
     @Override
