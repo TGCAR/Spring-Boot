@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 
 import java.util.UUID;
 
-@JsonTypeName("simple")
+@JsonTypeName("fixprice")
 public class FixPriceProduct extends Product {
     // Приватная константа для фиксированной цены
     private final int FIXED_PRICE = 50; // фиксированная цена
