@@ -14,7 +14,7 @@ import java.util.*;
 public class StorageService {
     private final Map<UUID, Product> productStorage = new HashMap<>();
     private final Map<UUID, Article> articleStorage = new HashMap<>();
-    private final Map<UUID, Product> availableProducts = new HashMap<>();
+
 
     public StorageService() {
         initializeTestData();
