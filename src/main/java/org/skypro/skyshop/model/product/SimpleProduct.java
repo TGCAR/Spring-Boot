@@ -1,7 +1,10 @@
 package org.skypro.skyshop.model.product;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
+
 import java.util.UUID;
 
+@JsonTypeName("simple")
 public class SimpleProduct extends Product {
     private final int price;
 
