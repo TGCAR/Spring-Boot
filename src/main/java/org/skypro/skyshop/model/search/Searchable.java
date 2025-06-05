@@ -15,4 +15,5 @@ public interface Searchable {
         return this.getClass().getSimpleName() + " — " + getContentType();
     }
 
+    String getTitle();
 }

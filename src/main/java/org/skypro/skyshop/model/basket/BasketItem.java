@@ -18,4 +18,8 @@ public class BasketItem {
     public int getQuantity() {
         return quantity;
     }
+
+    public Object count() {
+        return null;
+    }
 }
